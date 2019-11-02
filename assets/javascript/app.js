@@ -40,3 +40,25 @@ $(document).ready(function() {
             }
         });
     }
+
+    //Submit button click event takes search term from form input, trims and pushes to topics array, displays button
+        $("#addtopics").on("click", function(event) {
+            event.preventDefault();
+            var newtopics = $("#topicInput").val().trim();
+            topics.push(newtopics);
+            console.log(topics);
+            $("#topicInput").val('');
+            displayButtons();
+          });
+    
+      //Function iterates through topics array to display button with array values in "myButtons" section of HTML
+        function displayButtons() {
+        $("#myButtons").empty();
+        for (var i = 0; i < topics.length; i++) {
+          var a = $('<button class="btn btn-primary">');
+          a.attr("id", "topics");
+          a.attr("data-search", topics[i]);
+          a.text(topics[i]);
+          $("#myButtons").append(a);
+        }
+      }
