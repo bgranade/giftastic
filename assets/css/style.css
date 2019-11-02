@@ -1,0 +1,14 @@
+#header {
+	background-color: black;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-family: "Carrois Gothic SC", sans-serif;
+}
+
+#topImageL {
+	width: 15%;
+	float: left;
+	margin-left: 20px;
+}
