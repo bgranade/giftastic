@@ -62,3 +62,25 @@ $(document).ready(function() {
           $("#myButtons").append(a);
         }
       }
+
+      displayButtons();
+    
+      //Click event on button with id of "topics" executes display_topics function
+      $(document).on("click", "#topics", display_topics);
+    
+      //Click event on gifs with class of "_Giphy" executes pausePlayGifs function
+      $(document).on("click", "._Giphy", pausePlayGifs);
+    
+      //Function accesses "data-state" attribute and depending on status, changes image source to "data-animate" or "data-still"
+      function pausePlayGifs() {
+           var state = $(this).attr("data-state");
+          if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+      }
+    }
+    
+    });
