@@ -20,4 +20,23 @@ $(document).ready(function() {
               var results = response.data;
               console.log(results);
               for (var i = 0; i < results.length; i++) {
-  
+                var topicsDiv = $("<div class='col-md-4'>");
+    
+                var rating = results[i].rating;
+                var defaultAnimatedSrc = results[i].images.fixed_height.url;
+                var staticSrc = results[i].images.fixed_height_still.url;
+                var topicsImage = $("<img>");
+                var p = $("<p>").text("Rating: " + rating);
+    
+                topicsImage.attr("src", staticSrc);
+                topicsImage.addClass("_Giphy");
+                topicsImage.attr("data-state", "still");
+                topicsImage.attr("data-still", staticSrc);
+                topicsImage.attr("data-animate", defaultAnimatedSrc);
+                topicsDiv.append(p);
+                topicsDiv.append(topicsImage);
+                $("#gifArea").prepend(topicsDiv);
+    
+            }
+        });
+    }
