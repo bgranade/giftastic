@@ -13,4 +13,11 @@ $(document).ready(function() {
     
         console.log(queryURL);
 
-        
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).done(function(response) {
+              var results = response.data;
+              console.log(results);
+              for (var i = 0; i < results.length; i++) {
+  

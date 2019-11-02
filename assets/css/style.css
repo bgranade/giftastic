@@ -12,3 +12,28 @@
 	float: left;
 	margin-left: 20px;
 }
+
+
+#topics {
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#theSearch {
+	margin: 0 auto;
+	text-align: center;
+	font-family: "Carrois Gothic SC", sans-serif;
+}
+
+#gifArea {
+	clear: both;
+	display: inline;
+	flex-wrap: wrap;
+}
+
+._Giphy {
+	padding: 2px;
+	width: 80%;
+}
